@@ -1,5 +1,4 @@
-/* eslint-disable */
-export default {
+const config = {
   displayName: 'app',
   preset: '../../jest.preset.js',
   transform: {
@@ -8,4 +7,7 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/app',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };
+
+export default config;

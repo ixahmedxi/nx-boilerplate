@@ -5,6 +5,10 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "extends": [
+        "plugin:prettier/recommended",
+        "plugin:eslint-comments/recommended"
+      ],
       "rules": {
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
@@ -33,6 +37,15 @@
       "rules": {
         "@typescript-eslint/consistent-type-imports": "warn"
       }
+    },
+    {
+      "files": ["*.spec.ts", "*.spec.tsx", "*.test.ts", "*.test.tsx"],
+      "extends": [
+        "plugin:testing-library/react",
+        "plugin:jest-dom/recommended",
+        "plugin:jest/recommended",
+        "plugin:jest/style"
+      ]
     },
     {
       "files": ["*.js", "*.jsx"],
