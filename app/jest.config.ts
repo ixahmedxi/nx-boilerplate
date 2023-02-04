@@ -6,7 +6,7 @@ const config = {
     '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nrwl/next/babel'] }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../coverage/apps/app',
+  coverageDirectory: '../coverage/app',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };
 
