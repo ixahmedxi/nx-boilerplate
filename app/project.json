@@ -1,7 +1,7 @@
 {
   "name": "app",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/app",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "app",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,12 +9,12 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "root": "apps/app",
-        "outputPath": "dist/apps/app"
+        "root": "app",
+        "outputPath": "dist/app"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/app"
+          "outputPath": "app"
         },
         "production": {}
       }
@@ -47,7 +47,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/app/jest.config.ts",
+        "jestConfig": "app/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -61,7 +61,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/app/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["app/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
