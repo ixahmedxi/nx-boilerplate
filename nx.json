@@ -35,5 +35,8 @@
       "!{projectRoot}/.eslintrc.json"
     ],
     "sharedGlobals": ["{workspaceRoot}/babel.config.json"]
+  },
+  "workspaceLayout": {
+    "libsDir": "packages"
   }
 }
