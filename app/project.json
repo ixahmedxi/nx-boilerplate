@@ -63,6 +63,18 @@
       "options": {
         "lintFilePatterns": ["app/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "pnpm exec tsc --noEmit -p app/tsconfig.json"
+          }
+        ],
+        "outputPath": "app/tsconfig.tsbuildinfo"
+      },
+      "outputs": ["{options.outputPath}"]
     }
   },
   "tags": []
