@@ -1,5 +1,6 @@
 //@ts-check
 import { withNx } from '@nrwl/next/plugins/with-nx.js';
+import { env } from '../packages/env/src/index.mjs';
 
 /**
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
@@ -10,6 +11,9 @@ const nextConfig = {
   },
   reactStrictMode: true,
   swcMinify: true,
+  publicRuntimeConfig: {
+    NODE_ENV: env.NODE_ENV,
+  },
   eslint: {
     ignoreDuringBuilds: !!process.env.CI,
   },

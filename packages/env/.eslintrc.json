@@ -1,0 +1,15 @@
+{
+  "extends": ["../../.eslintrc.json"],
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.js", "*.jsx", "*.mjs"],
+      "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": "latest",
+        "project": ["packages/env/tsconfig.eslint.json"]
+      },
+      "rules": {}
+    }
+  ]
+}
