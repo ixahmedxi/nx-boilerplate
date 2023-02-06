@@ -40,12 +40,18 @@
     },
     {
       "files": ["*.spec.ts", "*.spec.tsx", "*.test.ts", "*.test.tsx"],
-      "extends": [
-        "plugin:testing-library/react",
-        "plugin:jest-dom/recommended",
-        "plugin:jest/recommended",
-        "plugin:jest/style"
-      ]
+      "plugins": ["vitest"],
+      "extends": ["plugin:testing-library/react"],
+      "rules": {
+        "vitest/consistent-test-it": "error",
+        "vitest/expect-expect": "error",
+        "vitest/no-conditional-tests": "error",
+        "vitest/no-focused-tests": "error",
+        "vitest/no-identical-title": "error",
+        "vitest/no-skipped-tests": "error",
+        "vitest/prefer-lowercase-title": "error",
+        "vitest/prefer-to-be": "error"
+      }
     },
     {
       "files": ["*.js", "*.jsx"],
