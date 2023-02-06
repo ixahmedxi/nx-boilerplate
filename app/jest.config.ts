@@ -1,4 +1,6 @@
-const config = {
+import type { Config } from 'jest';
+
+const config: Config = {
   displayName: 'app',
   preset: '../jest.preset.js',
   transform: {
