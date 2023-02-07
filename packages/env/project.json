@@ -4,11 +4,18 @@
   "sourceRoot": "packages/env/src",
   "projectType": "library",
   "targets": {
+    "build": {
+      "executor": "@nrwl/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/env"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/env/**/*.mjs", "packages/env/**/*.js"]
+        "lintFilePatterns": ["packages/env/**/*.mjs"]
       }
     }
   },

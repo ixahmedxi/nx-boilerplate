@@ -3,10 +3,10 @@
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
-      "files": ["*.ts", "*.js", "*.jsx", "*.mjs"],
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx", "*.mjs"],
       "parserOptions": {
-        "sourceType": "module",
         "ecmaVersion": "latest",
+        "sourceType": "module",
         "project": ["packages/env/tsconfig.eslint.json"]
       },
       "rules": {}

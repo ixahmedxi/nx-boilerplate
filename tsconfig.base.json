@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@acme/env": ["packages/env/src/index.mjs"]
+      "@acme/env": ["packages/env/src/index.mjs"],
+      "@acme/server": ["packages/server/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
