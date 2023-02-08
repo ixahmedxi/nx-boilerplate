@@ -33,6 +33,18 @@
         "lintFilePatterns": ["packages/server/**/*.ts"]
       }
     },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "pnpm exec tsc --noEmit -p packages/server/tsconfig.lib.json"
+          }
+        ],
+        "outputPath": "packages/server/tsconfig.tsbuildinfo"
+      },
+      "outputs": ["{options.outputPath}"]
+    },
     "prisma-format": {
       "executor": "nx:run-commands",
       "options": {
