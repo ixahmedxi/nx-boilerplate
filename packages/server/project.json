@@ -45,6 +45,17 @@
       },
       "outputs": ["{options.outputPath}"]
     },
+    "prisma-seed": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "pnpm exec ts-node --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} packages/server/prisma/seed.test.ts"
+          }
+        ]
+      },
+      "dependsOn": ["prisma-push"]
+    },
     "prisma-format": {
       "executor": "nx:run-commands",
       "options": {
